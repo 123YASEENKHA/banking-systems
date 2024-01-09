@@ -64,6 +64,14 @@ if opr==2: # user wanted to read the data
     j = myopr()
     cusid = int(input("please enter customer id for fetching data"))
     objread.specific_info(cusid,j)
+from update import update
+objupdate=update()
+if opr ==3:
+    j = myopr()
+    cusid = int(input("please enter customer id for fetching data"))
+    colname = input("please enter column name:")
+    newval = input("please enter new values:") # 500 str # 'jhon'
+    objupdate.myupdate(j,colname,newval,cusid)
 
 from delect import delete
 objdelete = delete()
